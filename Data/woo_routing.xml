@@ -1,0 +1,28 @@
+<woo-routing>
+<control>
+<command path="/" class="\Project_Woo\Commands\DefaultCommand">
+    <view name="main" />
+    <status value="CMD_ERROR">
+        <viev name="error"/>
+    </status>
+</command>
+
+<command path="/listvenues" class="\Project_Woo\Commands\AddVenue">
+    <view name="listvenues" />
+</command>
+
+<command path="/addvenue" class="\Project_Woo\Commands\AddVenue">
+    <view name="addvenue" />
+    <status value="CMD_OK">
+        <forward path="/addspace"/>
+    </status>
+</command>
+
+<command path="/addspace" class="\Project_Woo\Commands\AddSpace">
+    <view name="addspace" />
+    <status value="CMD_OK">
+        <forward path="/listvenues" />
+    </status>
+</command>
+</control>
+</woo-routing>
