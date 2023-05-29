@@ -4,8 +4,7 @@
 namespace megaquiz\quizobjects;
 
 /**
- * Class User
- * @package megaquiz\quizobjects
+ * @package quizobjects
  */
 
 class User
